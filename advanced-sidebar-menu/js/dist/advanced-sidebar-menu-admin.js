@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 9968:
+/***/ 501:
 /*!********************************!*\
   !*** ./js/src/pcss/admin.pcss ***!
   \********************************/
@@ -88,7 +88,7 @@ var __webpack_exports__ = {};
   !*** ./js/src/widget-admin.ts ***!
   \********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _pcss_admin_pcss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pcss/admin.pcss */ 9968);
+/* harmony import */ var _pcss_admin_pcss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pcss/admin.pcss */ 501);
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ 1669);
 
 

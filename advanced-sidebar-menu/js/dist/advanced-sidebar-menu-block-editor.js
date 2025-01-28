@@ -801,6 +801,22 @@ const Preview = ({
     });
   }
   const sanitizedClientId = sanitizeClientId(clientId);
+  let attributesToSend = {
+    ...attributes,
+    isServerSideRenderRequest: true,
+    clientId: sanitizedClientId,
+    sidebarId: getSidebarId(clientId)
+  };
+  /**
+   * Filters the attributes sent to the preview.
+   *
+   * @since 9.6.3
+   *
+   * @param {Object} attributes The attributes to send to the preview.
+   * @param {string} block      The block name.
+   * @param {string} clientId   The client id.
+   */
+  attributesToSend = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_6__.applyFilters)('advanced-sidebar-menu.blocks.preview.attributes', attributesToSend, block, clientId);
   return (
     /*#__PURE__*/
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
@@ -815,13 +831,7 @@ const Preview = ({
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_2___default()), {
         EmptyResponsePlaceholder: placeholder(block),
         LoadingResponsePlaceholder: TriggerWhenLoadingFinished,
-        attributes: {
-          ...attributes,
-          // Send custom attribute to determine server side renders.
-          isServerSideRenderRequest: true,
-          clientId: sanitizedClientId,
-          sidebarId: getSidebarId(clientId)
-        },
+        attributes: attributesToSend,
         block: block,
         httpMethod: 'POST',
         skipBlockSupportAttributes: true

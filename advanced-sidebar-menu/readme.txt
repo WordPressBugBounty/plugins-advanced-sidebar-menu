@@ -3,9 +3,9 @@ Contributors: onpointplugins, Mat Lipe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40onpointplugins%2ecom&lc=US&item_name=Advanced%20Sidebar%20Menu&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: menus, page menus, category menus, sidebars, hierarchy
 Requires at least: 6.2.0
-Tested up to: 6.8.1
+Tested up to: 6.8.2
 Requires PHP: 7.4.0
-Stable tag: 9.7.0
+Stable tag: 9.7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Fully automatic sidebar menus.
@@ -169,6 +169,12 @@ Yes. Based on whatever page, post or category you are on, the menu will change a
 
 == Changelog ==
 
+= 9.7.1 =
+* Established a migration plan for removing the `WidgetWithId` interface.
+* Improved GitHub Actions workflows security.
+* Updated node packages to resolve vulnerabilities.
+* Tested to WordPress Core 6.8.2.
+
 = 9.7.0 =
 * Added new individual block icons.
 * Reduced block registration attribute size.
@@ -182,7 +188,7 @@ Yes. Based on whatever page, post or category you are on, the menu will change a
 * Required the PRO version 9.6.1+.
 * Tested to WordPress core 6.8.0.
 
-= 9.6.4 = 
+= 9.6.4 =
 * Improved labels and positions in block settings.
 * Added original plugin author to the readme.
 * Updated dompurify to version 3.2.4 to resolve dependency vulnerabilities.
@@ -203,7 +209,7 @@ Yes. Based on whatever page, post or category you are on, the menu will change a
 * Fixed double up of block shadow in previews.
 * Tested to WordPress Core 6.7.0.
 
-= 9.6.1 = 
+= 9.6.1 =
 * Introduce JEST unit testings for the basic version.
 * Improved the automated testing suite.
 * Improved deployment workflows.
